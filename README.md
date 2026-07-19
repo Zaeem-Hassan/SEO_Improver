@@ -176,21 +176,6 @@ Worth reading if you're wiring this to a client's property:
 - **`agent/channels/eve.ts` ships with `placeholderAuth()`**, which blocks browser requests in production. Fine locally — replace it with a real auth provider before deploying anything client-facing.
 - The sandbox runs with an open network policy, because the agent has to reach whatever site it's auditing.
 
----
-
-## Why this repo exists
-
-The documented install path from [atomeve.dev](https://www.atomeve.dev/start.md) is `npx atom-eve create my-agent --agent seo-improver`. As of July 2026, **that fails for every agent in the registry**, including the docs' own example: the CLI fetches `registry/<agent>/atom.json`, which doesn't exist — the registry moved to README-frontmatter manifests and the published CLI (0.1.4) predates that change.
-
-This repo is that agent, already installed, so you can skip it.
-
-If you're installing from the upstream registry yourself on Windows, three more things will bite you:
-
-1. `atom-eve create` spawns `npx` without a shell → `spawnSync npx ENOENT`. Scaffold with `npx eve init <name>` directly instead.
-2. Local-path installs are detected via `startsWith(".") || startsWith("/")`, so `C:\...` paths are treated as registry names. Use a relative `./` path.
-3. If you have `core.autocrlf=true`, the CRLF checkout defeats the frontmatter parser's `/^---\n/`. Clone with `git -c core.autocrlf=false`.
-
----
 
 
 ## License
