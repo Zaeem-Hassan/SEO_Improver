@@ -4,8 +4,6 @@ An AI agent that reads your real Google Search Console data, tells you exactly w
 
 Not an SEO audit tool. An audit tells you what's wrong once. This runs on a loop: it writes down what it recommended, and grades itself against Google's numbers the next time it wakes up.
 
-> **This is a ready-to-run packaging of the [Atom Eve](https://github.com/elie222/atom-eve) `seo-improver` agent.** The agent itself is by the Atom Eve maintainers (MIT). This repo exists because the published `atom-eve` CLI currently can't install it — see [Why this repo exists](#why-this-repo-exists). Clone this and skip that problem entirely.
-
 ---
 
 ## How it works
@@ -194,11 +192,6 @@ If you're installing from the upstream registry yourself on Windows, three more 
 
 ---
 
-## Credits
-
-The `seo-improver` agent — its instructions, tools, and design — is by the **[Atom Eve](https://github.com/elie222/atom-eve)** maintainers, MIT licensed. Built on the [Eve](https://github.com/vercel/eve) framework by Vercel.
-
-This repo adds a working pre-installed checkout, a credential verification script, and the Windows notes above.
 
 ## License
 
